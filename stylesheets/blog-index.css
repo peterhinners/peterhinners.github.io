@@ -5,3 +5,14 @@ font-family: 'Julius Sans One', sans-serif;
 font-weight: bold;
 color: black;
 }
+
+main li {
+  font-family: 'Libre Baskerville', serif;
+  display: block;
+  padding: 10px;
+  color: #666666;
+}
+
+main li a {
+  color: #666666;
+}
