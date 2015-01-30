@@ -79,3 +79,11 @@ img {
     display: block;
     margin: 0 auto;
 }
+
+#firstjapchar {
+  margin-top: -25px;
+}
+
+#secondjapchar {
+  margin-top: -75px
+}
