@@ -10,6 +10,14 @@ main li {
   font-family: 'Libre Baskerville', serif;
   display: block;
   padding: 10px;
-
 }
 
+#leftsign {
+  float: left;
+  margin-top: -100px;
+}
+
+#rightsign {
+  float: right;
+  margin-top: -100px;
+}
