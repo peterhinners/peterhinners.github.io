@@ -1,0 +1,30 @@
+
+h1{
+  font-family: 'Indie Flower', cursive;
+  color: black;
+  font-size: 80px;
+  letter-spacing: .2em;
+  text-align: center;
+  margin: 10px;
+}
+
+h5{
+  font-family: 'Indie Flower', cursive;
+  color: #FF66CC;
+  letter-spacing: .2em;
+  text-align: center;
+  margin: 10px;
+}
+
+li{
+  font-family: 'Indie Flower', cursive;
+  display: inline;
+  padding: 50px;
+}
+
+ul{
+  text-align: center;
+  position: relative;
+  right: 30px;
+  top: 20px;
+}
