@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pete's Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-index.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <header>
+    <h1><a href="http://peterhinners.github.io">Pete Hinners</a></h1>
+    <h5><em>Full Stack Developer</em></h5>
+  </header>
+  <nav>
+
+    <ul>
+      <li><a href="#"><span class="underline_me">About</span></a></li>
+      <li><a href="http://peterhinners.github.io/blog/index.html"><span class="underline_me">Blog</span></a></li>
+      <li><a href="#"><span class="underline_me">Projects</span></a></li>
+      <li><a href="#"><span class="underline_me">Contact</span></a></li>
+    </ul>
+</nav>
+<br>
+<br>
+<br>
+
+  <section>
+    <h4>Variable Scope<br>March 15th, 2015</h4>
+    <p>In general, scope is the accessbility or reach that variables and/or constants have. We'll briefly look at three variable scope areas here... global, class and local.
+</p>
+    <p>Global scope, as the name suggests, is scope that includes the whole program. Global variables begin with a $ sign (ex. $global_variable) and enjoy a certain power, as they are always in scope, no matter where they are in the progam. This can be quite useful, but in spite of their seeming attractiveness, global variables are rarely used in practice. The reason? Their strength is also their downfall. They can undermine the intentions of a well-designed program if they are used in a haphazard way. And they can also take the place of solid object-oriented design.
+    </p>
+    <br>
+
+    
+
+<p>The scope of a class variable is one that is available both within that class, and also within any instance of that Class. If you have a class City, and you create two instances/objects of that class, say houston = City.new and boston = City.new, a class variable created within the original City class is available and accessible to any number of new City class instances/objects. They are recognized by the double @@ sign (ex. @@location).</p>
+<br>
+
+<p>Local scope variables are possibly the most common, and they can be recycled and used as fresh new variables once you've left their former scope. In general, local scope normally begins and ends according to a few conventions (see The Well-Grounded Rubyist by David A. Black):</p>
+<br>
+<p>The top level, above any and all definition blocks, has its own local scope.</p>
+<br>
+<p>Each class or module definition block has its own local scope.</p>
+<br>
+<p>Each method definition has its own local scope.</p>
+
+
+
+	
+
+
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+
+</html>
