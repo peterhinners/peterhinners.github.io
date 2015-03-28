@@ -35,7 +35,7 @@ var jerryImage = new Image();
 jerryImage.onload = function () {
 	jerryReady = true;
 }
-jerryImage.src = "../imgs/jerry2.png";
+jerryImage.src = "../imgs/jerry101.png";
 
 // Tom image
 var tomReady = false;
@@ -43,7 +43,7 @@ var tomImage = new Image();
 tomImage.onload = function () {
 	tomReady = true;
 }
-tomImage.src = "../imgs/tomsleep1.png";
+tomImage.src = "../imgs/sleepingtom.png";
 
 // Cheese image
 var cheeseReady = false;
@@ -152,7 +152,7 @@ var render = function () {
 
 // Draw when Tom's awoken
 var render2 = function () {
-	tomImage.src = "../imgs/madtom.png";
+	tomImage.src = "../imgs/tj101.png";
 	if (bgReady) {
 		ctx.drawImage(bgImage, 0, 0);
 	}
@@ -180,7 +180,7 @@ var render2 = function () {
 
 // Main loop
 var main = function () {
-	tomImage.src = "../imgs/tomsleep1.png";
+	tomImage.src = "../imgs/sleepingtom.png";
 	playToons();
 	var now = Date.now();
 	var delta = now - then;
