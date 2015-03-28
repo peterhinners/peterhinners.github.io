@@ -39,11 +39,13 @@ jerryImage.src = "../imgs/jerry2.png";
 
 // Tom image
 var tomReady = false;
-var tomImage = new Image();
-tomImage.onload = function () {
+var tomImage1 = new Image();
+var tomImage2 = new Image();
+tomImage1.onload = function () {
 	tomReady = true;
 }
-tomImage.src = "../imgs/sleepingtom.png";
+tomImage1.src = "../imgs/sleepingtom.png";
+tomImage2.src = "../imgs/tj101.png";
 
 // Cheese image
 var cheeseReady = false;
@@ -135,7 +137,7 @@ var render = function () {
 	}
 
 	if (tomReady) {
-		ctx.drawImage(tomImage, tom.x, tom.y);
+		ctx.drawImage(tomImage1, tom.x, tom.y);
 	}
 
 	if (cheeseReady) {
@@ -152,7 +154,7 @@ var render = function () {
 
 // Draw when Tom's awoken
 var render2 = function () {
-	tomImage.src = "../imgs/tj101.png";
+	
 	if (bgReady) {
 		ctx.drawImage(bgImage, 0, 0);
 	}
@@ -162,7 +164,7 @@ var render2 = function () {
 	}
 
 	if (tomReady) {
-		ctx.drawImage(tomImage, tom.x, tom.y);
+		ctx.drawImage(tomImage2, tom.x, tom.y);
 	}
 
 	if (cheeseReady) {
@@ -175,12 +177,12 @@ var render2 = function () {
 	ctx.textAlign = "left";
 	ctx.textBaseline = "top";
 	ctx.fillText("You woke up Tom! He ate your cheese!", 32, 32);
+
 	noMoreCheese();
 }
 
 // Main loop
 var main = function () {
-	tomImage.src = "../imgs/sleepingtom.png";
 	playToons();
 	var now = Date.now();
 	var delta = now - then;
