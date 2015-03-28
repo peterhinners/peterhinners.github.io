@@ -6,13 +6,13 @@
 		<title>Tom &amp; Jerry</title>
 	</head>
 	<body>
-	<audio id="audiotag1" src="../stylesheets/toons.mp3" preload="auto"></audio>
+	<audio id="audiotag1" src="../audio/TJtoons2.mp3" preload="auto"></audio>
 		<script>
 //Big props to http://www.lostdecadegames.com/how-to-make-a-simple-html5-canvas-game/ for creating an awesome tutorial and helping with the main template for this idea.
 
 function playToons() {
 		document.getElementById('audiotag1').play();
-	};
+	}
 //canvas
 var canvas = document.createElement("canvas");
 var ctx = canvas.getContext("2d");
@@ -25,7 +25,7 @@ var bgReady = false;
 var bgImage = new Image();
 bgImage.onload = function () {
 	bgReady = true;
-};
+}
 bgImage.src = "../imgs/tjbigger.jpg"; 
 
 
@@ -34,7 +34,7 @@ var jerryReady = false;
 var jerryImage = new Image();
 jerryImage.onload = function () {
 	jerryReady = true;
-};
+}
 jerryImage.src = "../imgs/jerry2.png";
 
 // Tom image
@@ -42,7 +42,7 @@ var tomReady = false;
 var tomImage = new Image();
 tomImage.onload = function () {
 	tomReady = true;
-};
+}
 tomImage.src = "../imgs/tomsleep1.png";
 
 // Cheese image
@@ -50,7 +50,7 @@ var cheeseReady = false;
 var cheeseImage = new Image();
 cheeseImage.onload = function () {
 	cheeseReady = true;
-};
+}
 cheeseImage.src = "../imgs/cheese1.png";
 
 // Game objects
@@ -91,7 +91,7 @@ var reset = function () {
 	cheese.x = 32 + (Math.random() * (canvas.width - 64));
 	cheese.y = 32 + (Math.random() * (canvas.height - 64));
 
-};
+}
 
 // Update game objects
 var update = function (modifier) {
@@ -119,11 +119,11 @@ var update = function (modifier) {
 		reset();
 		}
 
-};
+}
 // When Tom wakes up and takes all Jerry's cheese
 var noMoreCheese = function () {
 	ateCheese = 0;
-};
+}
 // Draw when Tom hasn't awoken
 var render = function () {
 	if (bgReady) {
@@ -148,7 +148,7 @@ var render = function () {
 	ctx.textAlign = "left";
 	ctx.textBaseline = "top";
 	ctx.fillText("Cheese: " + ateCheese, 32, 32);
-};
+}
 
 // Draw when Tom's awoken
 var render2 = function () {
@@ -176,7 +176,7 @@ var render2 = function () {
 	ctx.textBaseline = "top";
 	ctx.fillText("You woke up Tom! He ate your cheese!", 32, 32);
 	noMoreCheese();
-};
+}
 
 // Main loop
 var main = function () {
@@ -201,7 +201,7 @@ var main = function () {
 
 	// Request to do this again ASAP
 	requestAnimationFrame(main);
-};
+}
 
 // Cross-browser support for requestAnimationFrame
 var w = window;
