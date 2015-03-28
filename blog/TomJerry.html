@@ -7,11 +7,27 @@
 	</head>
 	<body>
 	<audio id="audiotag1" src="../audio/TJtoons2.mp3" preload="auto"></audio>
+	<audio id="audiotag2" src="../audio/muchacha.mp3" preload="auto"></audio>
 		<script>
 //Big props to http://www.lostdecadegames.com/how-to-make-a-simple-html5-canvas-game/ for creating an awesome tutorial and helping with the main template for this idea.
 
-function playToons() {
-		document.getElementById('audiotag1').play();
+var music = document.getElementById("audiotag1");
+function playMusic() {
+	music.play();
+}
+function loadMusic () {
+	music.load();
+}
+
+function pauseMusic () {
+	music.pause();
+	// music.currentTime = 0.0;
+	// music.src = "";
+	// music = document.getElementById("audiotag2");
+
+}
+function playVictory() {
+		document.getElementById('audiotag2').play();
 	}
 //canvas
 var canvas = document.createElement("canvas");
@@ -20,13 +36,51 @@ canvas.width = 900;
 canvas.height = 700;
 document.body.appendChild(canvas);
 
-// Background image
+// Background images
+var image1 = "../imgs/background1.png"; 
+var image2 = "../imgs/background2.png"; 
+var image3 = "../imgs/background3.png"; 
+var image4 = "../imgs/background4.png"; 
+var image5 = "../imgs/background5.png";
+var image6 = "../imgs/fireworks2.png";
+
 var bgReady = false;
-var bgImage = new Image();
-bgImage.onload = function () {
+var bgImage1 = new Image();
+bgImage1.onload = function () {
 	bgReady = true;
-}
-bgImage.src = "../imgs/tjbigger.jpg"; 
+} 
+bgImage1.src = image1;
+
+var bgImage2 = new Image();
+bgImage2.onload = function () {
+	bgReady = true;
+} 
+bgImage2.src = image2;
+
+var bgImage3 = new Image();
+bgImage3.onload = function () {
+	bgReady = true;
+} 
+bgImage3.src = image3;
+
+var bgImage4 = new Image();
+bgImage4.onload = function () {
+	bgReady = true;
+} 
+bgImage4.src = image4;
+
+var bgImage5 = new Image();
+bgImage5.onload = function () {
+	bgReady = true;
+} 
+bgImage5.src = image5;
+
+var bgImage6 = new Image();
+bgImage6.onload = function () {
+	bgReady = true;
+} 
+bgImage6.src = image6;
+
 
 
 // Jerry image
@@ -141,7 +195,18 @@ var noMoreCheese = function () {
 // Draw when Tom hasn't awoken
 var render = function () {
 	if (bgReady) {
-		ctx.drawImage(bgImage, 0, 0);
+		if (ateCheese < 3) 
+			ctx.drawImage(bgImage1, 0, 0);
+		else if (ateCheese < 6)
+			ctx.drawImage(bgImage4, 0, 0);
+		else if (ateCheese < 9)
+			ctx.drawImage(bgImage2, 0, 0);
+		else if (ateCheese < 12)
+			ctx.drawImage(bgImage5, 0, 0);
+		else if (ateCheese <15)
+			ctx.drawImage(bgImage3, 0, 0);
+		else
+			ctx.drawImage(bgImage1, 0, 0);
 	}
 
 	if (jerryReady) {
@@ -161,14 +226,14 @@ var render = function () {
 	ctx.font = "24px Helvetica";
 	ctx.textAlign = "left";
 	ctx.textBaseline = "top";
-	ctx.fillText("Cheese: " + ateCheese, 32, 32);
+	ctx.fillText("15 pieces of cheese to win...                                                               Cheese: " + ateCheese, 32, 32);
 }
 
 // Draw when Tom's awoken
 var render2 = function () {
 	
 	if (bgReady) {
-		ctx.drawImage(bgImage, 0, 0);
+		ctx.drawImage(bgImage1, 0, 0);
 	}
 
 	if (jerryReady) {
@@ -191,11 +256,49 @@ var render2 = function () {
 	ctx.fillText("You woke up Tom! He ate your cheese!", 32, 32);
 	noMoreCheese();
 
+}
+
+var render3 = function () {
+	
+	if (bgReady) {
+		ctx.drawImage(bgImage6, 0, 0);
 	}
+
+	if (jerryReady) {
+		ctx.drawImage(jerryImage, jerry.x, jerry.y);
+	}
+
+	playVictory();
+
+	// if (cheeseReady) {
+	// 	ctx.drawImage(cheeseImage, cheese.x, cheese.y);
+	// }
+
+	// Score
+	ctx.fillStyle = "rgb(250, 250, 250)";
+	ctx.font = "24px Helvetica";
+	ctx.textAlign = "left";
+	ctx.textBaseline = "top";
+	ctx.fillText("YOU WIN!!", 32, 32);
+	gameOver();
+	
+	
+
+	}
+
+var gameOver = function () {
+	jerry.speed = 0;
+}
 
 // Main loop
 var main = function () {
-	playToons();
+	if (ateCheese >= 15) {
+		pauseMusic();
+
+		playVictory();
+	} else {
+		playMusic();
+	}
 	var now = Date.now();
 	var delta = now - then;
 
@@ -207,10 +310,12 @@ var main = function () {
 		&& tom.y <= (jerry.y + 32)
 	) {
 		render2();
-
+} else if (ateCheese < 15) {
+			render();
 	} else {
-	render();
+			render3();
 	}
+	
 
 	then = now;
 
@@ -228,6 +333,7 @@ requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame
 var then = Date.now();
 reset();
 main();
+
 
 
 
