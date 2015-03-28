@@ -111,9 +111,9 @@ var update = function (modifier) {
 // Does Jerry eat the cheese?
 	if (
 		jerry.x <= (cheese.x + 32)
-		&& cheese.x <= (jerry.x + 32)
+		&& cheese.x <= (jerry.x + 100)
 		&& jerry.y <= (cheese.y + 32)
-		&& cheese.y <= (jerry.y + 32)
+		&& cheese.y <= (jerry.y + 100)
 		) {
 		++ateCheese;
 		reset();
@@ -188,9 +188,9 @@ var main = function () {
 	update(delta / 1000);
 	if (
 		jerry.x <= (tom.x + 400)
-		&& tom.x <= (jerry.x + 32)
+		&& tom.x <= (jerry.x + 100)
 		&& jerry.y <= (tom.y + 100)
-		&& tom.y <= (jerry.y + 32)
+		&& tom.y <= (jerry.y + 100)
 	) {
 		render2();
 	} else {
