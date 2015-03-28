@@ -43,8 +43,26 @@ var image3 = "../imgs/background3.png";
 var image4 = "../imgs/background4.png"; 
 var image5 = "../imgs/background5.png";
 var image6 = "../imgs/fireworks2.png";
+var image7 = "../imgs/youwin.png";
+var image8 = "../imgs/tomatecheese.png";
+var image9 = "../imgs/cheese0.png";
+var image10 = "../imgs/cheese1.png";
+var image11 = "../imgs/cheese2.png";
+var image12 = "../imgs/cheese3.png";
+var image13 = "../imgs/cheese4.png";
+var image14 = "../imgs/cheese5.png";
+var image15 = "../imgs/cheese6.png";
+var image16 = "../imgs/cheese7.png";
+var image17 = "../imgs/cheese8.png";
+var image18 = "../imgs/cheese9.png";
+var image19 = "../imgs/cheese10.png";
+var image20 = "../imgs/cheese11.png";
+var image21= "../imgs/cheese12.png";
+var image22 = "../imgs/cheese13.png";
+var image23 = "../imgs/cheese14.png";
 
 var bgReady = false;
+
 var bgImage1 = new Image();
 bgImage1.onload = function () {
 	bgReady = true;
@@ -80,6 +98,112 @@ bgImage6.onload = function () {
 	bgReady = true;
 } 
 bgImage6.src = image6;
+
+var bgImage7 = new Image();
+bgImage7.onload = function () {
+	bgReady = true;
+} 
+bgImage7.src = image7;
+
+var badTom = new Image();
+badTom.onload = function () {
+	bgReady = true;
+} 
+badTom.src = image8;
+
+var cheese0 = new Image();
+cheese0.onload = function () {
+	bgReady = true;
+} 
+cheese0.src = image9;
+
+var cheese1 = new Image();
+cheese1.onload = function () {
+	bgReady = true;
+} 
+cheese1.src = image10;
+
+var cheese2 = new Image();
+cheese2.onload = function () {
+	bgReady = true;
+} 
+cheese2.src = image11;
+
+var cheese3 = new Image();
+cheese3.onload = function () {
+	bgReady = true;
+} 
+cheese3.src = image12;
+
+var cheese4 = new Image();
+cheese4.onload = function () {
+	bgReady = true;
+} 
+cheese4.src = image13;
+
+var cheese5 = new Image();
+cheese5.onload = function () {
+	bgReady = true;
+} 
+cheese5.src = image14;
+
+var cheese6 = new Image();
+cheese6.onload = function () {
+	bgReady = true;
+} 
+cheese6.src = image15;
+
+var cheese7 = new Image();
+cheese7.onload = function () {
+	bgReady = true;
+} 
+cheese7.src = image16;
+
+var cheese8 = new Image();
+cheese8.onload = function () {
+	bgReady = true;
+} 
+cheese8.src = image17;
+
+var cheese9 = new Image();
+cheese9.onload = function () {
+	bgReady = true;
+} 
+cheese9.src = image18;
+
+var cheese10 = new Image();
+cheese10.onload = function () {
+	bgReady = true;
+} 
+cheese10.src = image19;
+
+var cheese11 = new Image();
+cheese11.onload = function () {
+	bgReady = true;
+} 
+cheese11.src = image20;
+
+var cheese12 = new Image();
+cheese12.onload = function () {
+	bgReady = true;
+} 
+cheese12.src = image21;
+
+var cheese13 = new Image();
+cheese13.onload = function () {
+	bgReady = true;
+} 
+cheese13.src = image22;
+
+var cheese14 = new Image();
+cheese14.onload = function () {
+	bgReady = true;
+} 
+cheese14.src = image23;
+
+
+
+
 
 
 
@@ -123,6 +247,8 @@ var cheese = {
 	x: 0,
 	y: 0
 };
+
+
 var ateCheese = 0;
 
 // Keyboard controls
@@ -146,6 +272,36 @@ var reset = function () {
 
 	cheese.x = 32 + (Math.random() * (canvas.width - 100));
 	cheese.y = 32 + (Math.random() * (canvas.height - 100));
+
+	if (
+		jerry.x <= (tom.x + 432)
+		&& tom.x <= (jerry.x + 72)
+		&& jerry.y <= (tom.y + 204)
+		&& tom.y <= (jerry.y + 80)
+	) {
+		jerry.x = 32 + (Math.random() * (canvas.width - 100));
+		jerry.y = 32 + (Math.random() * (canvas.height - 100));
+	}
+
+	if (
+		jerry.x <= (cheese.x + 72)
+		&& cheese.x <= (jerry.x + 72)
+		&& jerry.y <= (cheese.y + 66)
+		&& cheese.y <= (jerry.y + 80)
+		) {
+		jerry.x = 32 + (Math.random() * (canvas.width - 100));
+		jerry.y = 32 + (Math.random() * (canvas.height - 100));
+	}
+
+	if (
+		tom.x <= (cheese.x + 72)
+		&& cheese.x <= (tom.x + 432)
+		&& tom.y <= (cheese.y + 66)
+		&& cheese.y <= (tom.y + 204)
+		) {
+		cheese.x = 32 + (Math.random() * (canvas.width - 100));
+		cheese.y = 32 + (Math.random() * (canvas.height - 100));
+	}
 
 }
 
@@ -221,16 +377,51 @@ var render = function () {
 		ctx.drawImage(cheeseImage, cheese.x, cheese.y);
 	}
 
+	if (bgReady) {
+		if (ateCheese === 0)
+			ctx.drawImage(cheese0, 32, 32);
+		if (ateCheese === 1)
+			ctx.drawImage(cheese1, 32, 32);
+		if (ateCheese === 2)
+			ctx.drawImage(cheese2, 32, 32);
+		if (ateCheese === 3)
+			ctx.drawImage(cheese3, 32, 32);
+		if (ateCheese === 4)
+			ctx.drawImage(cheese4, 32, 32);
+		if (ateCheese === 5)
+			ctx.drawImage(cheese5, 32, 32);
+		if (ateCheese === 6)
+			ctx.drawImage(cheese6, 32, 32);
+		if (ateCheese === 7)
+			ctx.drawImage(cheese7, 32, 32);
+		if (ateCheese === 8)
+			ctx.drawImage(cheese8, 32, 32);
+		if (ateCheese === 9)
+			ctx.drawImage(cheese9, 32, 32);
+		if (ateCheese === 10)
+			ctx.drawImage(cheese10, 32, 32);
+		if (ateCheese === 11)
+			ctx.drawImage(cheese11, 32, 32);
+		if (ateCheese === 12)
+			ctx.drawImage(cheese12, 32, 32);
+		if (ateCheese === 13)
+			ctx.drawImage(cheese13, 32, 32);
+		if (ateCheese === 14)
+			ctx.drawImage(cheese14, 32, 32);
+
+	} 
+
 	// Score
-	ctx.fillStyle = "rgb(250, 250, 250)";
-	ctx.font = "24px Helvetica";
-	ctx.textAlign = "left";
-	ctx.textBaseline = "top";
-	ctx.fillText("15 pieces of cheese to win...                                                               Cheese: " + ateCheese, 32, 32);
+	// ctx.fillStyle = "rgb(250, 250, 250)";
+	// ctx.font = "24px Helvetica";
+	// ctx.textAlign = "left";
+	// ctx.textBaseline = "top";
+	// ctx.fillText("                                                                                                         Cheese: " + ateCheese, 32, 32);
 }
 
 // Draw when Tom's awoken
 var render2 = function () {
+
 	
 	if (bgReady) {
 		ctx.drawImage(bgImage1, 0, 0);
@@ -244,17 +435,19 @@ var render2 = function () {
 		ctx.drawImage(tomImage2, tom.x, tom.y);
 	}
 
-	if (cheeseReady) {
-		ctx.drawImage(cheeseImage, cheese.x, cheese.y);
+	// if (cheeseReady) {
+	// 	ctx.drawImage(cheeseImage, cheese.x, cheese.y);
+	// }
+
+	if (bgReady) {
+		ctx.drawImage(badTom, 32, 32);
 	}
 
-	// Score
-	ctx.fillStyle = "rgb(250, 250, 250)";
-	ctx.font = "24px Helvetica";
-	ctx.textAlign = "left";
-	ctx.textBaseline = "top";
-	ctx.fillText("You woke up Tom! He ate your cheese!", 32, 32);
-	noMoreCheese();
+	// cheese.x = 32 + (Math.random() * (canvas.width - 100));
+	// cheese.y = 32 + (Math.random() * (canvas.height - 100));
+
+		noMoreCheese();
+
 
 }
 
@@ -264,22 +457,14 @@ var render3 = function () {
 		ctx.drawImage(bgImage6, 0, 0);
 	}
 
+	if (bgReady) {
+		ctx.drawImage(bgImage7, (canvas.width / 2 - 150), (canvas.height /2 - 90));
+	}
+
 	if (jerryReady) {
 		ctx.drawImage(jerryImage, jerry.x, jerry.y);
 	}
-
 	playVictory();
-
-	// if (cheeseReady) {
-	// 	ctx.drawImage(cheeseImage, cheese.x, cheese.y);
-	// }
-
-	// Score
-	ctx.fillStyle = "rgb(250, 250, 250)";
-	ctx.font = "24px Helvetica";
-	ctx.textAlign = "left";
-	ctx.textBaseline = "top";
-	ctx.fillText("YOU WIN!!", 32, 32);
 	gameOver();
 	
 	
@@ -292,6 +477,7 @@ var gameOver = function () {
 
 // Main loop
 var main = function () {
+	
 	if (ateCheese >= 15) {
 		pauseMusic();
 
@@ -304,7 +490,7 @@ var main = function () {
 
 	update(delta / 1000);
 	if (
-		jerry.x <= (tom.x + 400)
+		jerry.x <= (tom.x + 380)
 		&& tom.x <= (jerry.x + 32)
 		&& jerry.y <= (tom.y + 100)
 		&& tom.y <= (jerry.y + 32)
