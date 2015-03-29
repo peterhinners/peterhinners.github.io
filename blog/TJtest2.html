@@ -9,26 +9,24 @@
 	<audio id="audiotag1" src="../audio/TJtoons2.mp3" preload="auto"></audio>
 	<audio id="audiotag2" src="../audio/muchacha.mp3" preload="auto"></audio>
 		<script>
-//Big props to http://www.lostdecadegames.com/how-to-make-a-simple-html5-canvas-game/ for creating an awesome tutorial and helping with the main template for this idea.
+//Big props to http://www.lostdecadegames.com/how-to-make-a-simple-html5-canvas-game/ for creating an awesome tutorial.
 
 var music = document.getElementById("audiotag1");
 function playMusic() {
 	music.play();
 }
+
 function loadMusic () {
 	music.load();
 }
 
 function pauseMusic () {
 	music.pause();
-	// music.currentTime = 0.0;
-	// music.src = "";
-	// music = document.getElementById("audiotag2");
 
 }
 function playVictory() {
 		document.getElementById('audiotag2').play();
-	}
+}
 //canvas
 var canvas = document.createElement("canvas");
 var ctx = canvas.getContext("2d");
@@ -61,6 +59,7 @@ var image21= "../imgs/cheese12.png";
 var image22 = "../imgs/cheese13.png";
 var image23 = "../imgs/cheese14.png";
 
+//render info needed for images
 var bgReady = false;
 
 var bgImage1 = new Image();
@@ -202,12 +201,7 @@ cheese14.onload = function () {
 cheese14.src = image23;
 
 
-
-
-
-
-
-// Jerry image
+// Jerry image & Jerry render info
 var jerryReady = false;
 var jerryImage = new Image();
 jerryImage.onload = function () {
@@ -215,7 +209,7 @@ jerryImage.onload = function () {
 }
 jerryImage.src = "../imgs/jerry2.png";
 
-// Tom image
+// Tom image & Tom render info
 var tomReady = false;
 var tomImage1 = new Image();
 var tomImage2 = new Image();
@@ -225,7 +219,7 @@ tomImage1.onload = function () {
 tomImage1.src = "../imgs/sleepingtom.png";
 tomImage2.src = "../imgs/tj101.png";
 
-// Cheese image
+// Cheese image & Cheese render info
 var cheeseReady = false;
 var cheeseImage = new Image();
 cheeseImage.onload = function () {
@@ -251,7 +245,7 @@ var cheese = {
 
 var ateCheese = 0;
 
-// Keyboard controls
+// Keyboard controls...when is a key being pressed?
 var keysDown = {};
 
 addEventListener("keydown", function (e) {
@@ -262,7 +256,10 @@ addEventListener("keyup", function (e) {
 	delete keysDown[e.keyCode];
 }, false);
 
-// Reset the game when the player catches the cheese
+// Reset the objects positions when the player catches the cheese
+// Also added some loose object detection so that if Tom or Jerry or
+// the Cheese are too close to each other, they get assigned 
+// another random position. 
 var reset = function () {
 	jerry.x = 32 + (Math.random() * (canvas.width - 100));
 	jerry.y = 32 + (Math.random() * (canvas.height - 100));
@@ -305,7 +302,10 @@ var reset = function () {
 
 }
 
-// Update game objects
+// Update Jerry's position based on arrow key input; added 
+// loose border protection. Modifier parameter keeps Jerry
+// running at the same speed no matter how fast or slow the
+// script is running. See Matt Hackett's article.
 var update = function (modifier) {
 	if (38 in keysDown) { // Player holding up
 		jerry.y -= jerry.speed * modifier;
@@ -348,7 +348,7 @@ var update = function (modifier) {
 var noMoreCheese = function () {
 	ateCheese = 0;
 }
-// Draw when Tom hasn't awoken
+// Main rendering function, when Tom is still asleep
 var render = function () {
 	if (bgReady) {
 		if (ateCheese < 3) 
@@ -411,15 +411,9 @@ var render = function () {
 
 	} 
 
-	// Score
-	// ctx.fillStyle = "rgb(250, 250, 250)";
-	// ctx.font = "24px Helvetica";
-	// ctx.textAlign = "left";
-	// ctx.textBaseline = "top";
-	// ctx.fillText("                                                                                                         Cheese: " + ateCheese, 32, 32);
 }
 
-// Draw when Tom's awoken
+// Render the following when Tom wakes up...
 var render2 = function () {
 
 	
@@ -435,22 +429,14 @@ var render2 = function () {
 		ctx.drawImage(tomImage2, tom.x, tom.y);
 	}
 
-	// if (cheeseReady) {
-	// 	ctx.drawImage(cheeseImage, cheese.x, cheese.y);
-	// }
-
 	if (bgReady) {
 		ctx.drawImage(badTom, 32, 32);
 	}
 
-	// cheese.x = 32 + (Math.random() * (canvas.width - 100));
-	// cheese.y = 32 + (Math.random() * (canvas.height - 100));
-
 		noMoreCheese();
-
-
 }
 
+// Win screen; render when Jerry collect 15 pieces of cheese
 var render3 = function () {
 	
 	if (bgReady) {
@@ -467,42 +453,40 @@ var render3 = function () {
 	playVictory();
 	gameOver();
 	
-	
-
 	}
 
+// when Jerry collects 15 pieces of cheese, slow his speed down
+// to zero so he can't interact with other objects anymore
 var gameOver = function () {
 	jerry.speed = 0;
 }
 
-// Main loop
+// Main game loop
 var main = function () {
 	
 	if (ateCheese >= 15) {
 		pauseMusic();
-
-		playVictory();
+		playVictory(); // when Jerry wins, play new song
 	} else {
 		playMusic();
 	}
 	var now = Date.now();
-	var delta = now - then;
+	var delta = now - then; // how much time has passed since then and now
 
-	update(delta / 1000);
+	update(delta / 1000); // this is the modifier parameter (see above)
 	if (
 		jerry.x <= (tom.x + 380)
-		&& tom.x <= (jerry.x + 32)
-		&& jerry.y <= (tom.y + 100)
-		&& tom.y <= (jerry.y + 32)
+		&& tom.x <= (jerry.x + 32) // If Jerry and Tom are touching
+		&& jerry.y <= (tom.y + 100) // do the 2nd render where
+		&& tom.y <= (jerry.y + 32) // Tom wakes up
 	) {
 		render2();
 } else if (ateCheese < 15) {
-			render();
+			render(); // If haven't eaten 15 pieces of cheese yet do the main render
 	} else {
-			render3();
+			render3(); // If Jerry ate 15 pieces, do the win game render 3.
 	}
 	
-
 	then = now;
 
 	// Request to do this again ASAP
@@ -515,7 +499,7 @@ var main = function () {
 var w = window;
 requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame || w.msRequestAnimationFrame || w.mozRequestAnimationFrame;
 
-// Let's play this game!
+// Play the game...
 var then = Date.now();
 reset();
 main();
