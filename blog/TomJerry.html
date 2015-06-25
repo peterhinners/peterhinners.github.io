@@ -28,15 +28,7 @@ function playVictory() {
 		document.getElementById('audiotag2').play();
 }
 //canvas
-var canvas = document.getElementsByName("canvas")[0];
-var style = canvas.style;
-style.marginLeft = "auto";
-style.marginRight = "auto";
-var parentStyle = canvas.parentElement.style;
-parentStyle.textAlign = "center";
-parentStyle.width = "100%";
-// var canvas = document.createElement("canvas");
-
+var canvas = document.createElement("canvas");
 var ctx = canvas.getContext("2d");
 canvas.width = 900;
 canvas.height = 700;
