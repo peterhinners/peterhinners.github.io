@@ -1,12 +1,12 @@
-#imagebackground {
+/*#imagebackground {
   width: 100%;
   height: 100%;
-}
+}*/
 
 canvas {
-		 
+		margin-top: 500px;
     width: 300px;
     margin: 0 auto;
-    vertical-align: middle;
+    
 
 }
