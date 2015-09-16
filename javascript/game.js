@@ -19,11 +19,11 @@
 			}
 			//canvas
 			// var canvas = document.createElement("canvas");
-			var canvas = $("#canvas");
+			var canvas = document.getElementById("canvas");
 			var ctx = canvas.getContext("2d");
 			// canvas.width = 900;
 			// canvas.height = 700;
-			// document.body.appendChild(canvas);
+			document.body.appendChild(canvas);
 
 			// Background images
 			var image1 = "../imgs/background1.png"; 
