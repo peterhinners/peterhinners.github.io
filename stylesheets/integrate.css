@@ -20,8 +20,8 @@ canvas {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    max-width: 710px;
-    max-height: 440px;
+    max-width: 800px;
+    height: auto;
     
 }
 
