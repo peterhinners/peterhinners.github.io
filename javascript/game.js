@@ -1,4 +1,4 @@
-<script>
+
 	//Big props to http://www.lostdecadegames.com/how-to-make-a-simple-html5-canvas-game/ for creating an awesome tutorial.
 
 			var music = document.getElementById("audiotag1");
@@ -499,4 +499,3 @@
 
 
 	
-</script>
