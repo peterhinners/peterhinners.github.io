@@ -21,6 +21,7 @@ canvas {
     margin-right: auto;
     display: block;
     width: 800px;
+    height: 400px;
 }
 
 #actual-content h4 {
