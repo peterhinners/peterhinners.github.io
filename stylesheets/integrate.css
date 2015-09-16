@@ -164,3 +164,11 @@ img {
 #secondjapchar {
   margin-top: -75px
 }
+
+#leftsign {
+  float: left;
+}
+
+#rightsign {
+  float: right;
+}
