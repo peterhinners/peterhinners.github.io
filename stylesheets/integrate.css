@@ -167,8 +167,10 @@ img {
 
 #leftsign {
   float: left;
+  max-width: 50%;
 }
 
 #rightsign {
   float: right;
+  max-width: 50%;
 }
