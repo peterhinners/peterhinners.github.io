@@ -20,8 +20,8 @@
 			//canvas
 			var canvas = document.createElement("canvas");
 			var ctx = canvas.getContext("2d");
-			canvas.width = 900;
-			canvas.height = 700;
+			// canvas.width = 900;
+			// canvas.height = 700;
 			document.body.appendChild(canvas);
 
 			// Background images
