@@ -25,7 +25,9 @@
     
 }*/
 
-
+.description {
+  color: red;
+}
 
 #actual-content h4 {
   text-align: center;
