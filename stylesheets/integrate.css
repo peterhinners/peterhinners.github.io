@@ -25,6 +25,16 @@
     
 }*/
 
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  background-color: #00a087;
+}
+
 #actual-content h4 {
   text-align: center;
   margin-left: 150px;
