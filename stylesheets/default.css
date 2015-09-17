@@ -8,6 +8,24 @@ font-weight: bold;
 color: black;
 }
 
+.hmm {
+
+  font-family: 'Libre Baskerville', sans-serif;
+  color: silver;
+}
+
+.yeppers {
+  /*font-family: "Julius Sans One", sans-serif;*/
+  font-weight: bold;
+}
+
+.whee {
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+  
+}
+
 h5 {
   text-align: center;
 font-family: 'Julius Sans One', sans-serif;
