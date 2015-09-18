@@ -1,10 +1,8 @@
 $(function() {
 	$("#landing-page").hide();
-	console.log("yikes");
+	console.log("yay!");
   $('.navbar').load('../navbar.html');
-  $('.navbar').load(function() {
-  	console.log("yippee");
-  	$("#landing-page").show();
-	});
+  $("#landing-page").show();
+	
 
 });
