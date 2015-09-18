@@ -1,7 +1,13 @@
 $(function() {
-	console.log("sweet");
-  $(".entries").on("click", "a", function(){
-    $(this).text("It works!");
+	console.log("hungry");
+  $(".entries").on("click", "a", function(event){
+  	var link = $(this).attr("href");
+  	// event.preventDefault();
+  	$(".entries").hide();
+    var request = $.ajax({url: link});
+    request.done(function(response){
+    	console.log(response);
+    });
 	});
 });
 
