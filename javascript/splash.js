@@ -1,10 +1,6 @@
 $(function() {
-	console.log("wow");
-	
-  $('#splash').load('../splash.html');
+	console.log("burger");
+  $('#navbar').load('../navbar.html');
   $('#landing').load('../landing.html');
-  
-	
-
 });
 
