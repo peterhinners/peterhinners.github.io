@@ -1,9 +1,9 @@
 $(function() {
-	console.log("whoa");
+	console.log("hmmm");
 	$("body").hide();
   $('#splash').load('../splash.html');
-  $("#splash").show();
-  $("#landing").show();
+  $("body").show();
+  
 	
 
 });
