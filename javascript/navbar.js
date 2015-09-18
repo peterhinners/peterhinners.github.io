@@ -2,7 +2,11 @@ $(function() {
 	$("#landing-page").hide();
 	console.log("yay!");
   $('.navbar').load('../navbar.html');
-  $("#landing-page").show();
 	
+
+});
+
+$(window).load(function(){
+  $("#landing-page").show();
 
 });
