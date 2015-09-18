@@ -1,8 +1,8 @@
 $(function() {
-	console.log("hmmm");
-	$("body").hide();
+	console.log("wow");
+	
   $('#splash').load('../splash.html');
-  $("body").show();
+  $('#landing').load('../landing.html');
   
 	
 
