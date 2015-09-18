@@ -1,6 +1,6 @@
 $(function() {
-	console.log("me again");
-  $(document).on("click", "a", function(){
+	console.log("sweet");
+  $(".entries").on("click", "a", function(){
     $(this).text("It works!");
 	});
 });
