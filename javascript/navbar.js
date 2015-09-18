@@ -1,5 +1,5 @@
 $(function() {
-	$(#"landing-page").hide();
+	$("#landing-page").hide();
 	console.log("yeppers");
   $('.navbar').load('../navbar.html');
   $('.navbar').load(function() {
