@@ -1,5 +1,9 @@
 $(function() {
-	console.log("yomama");
-    $('.navbar').load('../navbar.html');
+	$(#"landing-page").hide();
+	console.log("yeppers");
+  $('.navbar').load('../navbar.html');
+  $('.navbar').load(function() {
+  	$("#landing-page").show();
+	});
 
 });
