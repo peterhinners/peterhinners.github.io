@@ -12,7 +12,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("nope");
+	console.log("yoyo");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
