@@ -5,11 +5,11 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("beige");
+	console.log("white");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
-  	$(".main-content").remove();
+  	$(".main-content").hide();
   	var link = $(this).attr("href");
   	var request = $.ajax({url: link});
   	request.done(function(response){
