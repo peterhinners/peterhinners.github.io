@@ -5,16 +5,12 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("ham");
+	console.log("tom");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
   	$("#canvas").remove();
-  	var myAudioTag1 = document.getElementById("audiotag1"); 
-  	
-  	var myAudioTag2 = document.getElementById("audiotag2"); 
-  	if(myAudioTag1){myAudioTag1.pause();}
-  	if(myAudioTag1){myAudioTag1.pause();}
+  	$('audio').each(function(){ this.pause() });
   	
   	var link = $(this).attr("href");
   	var request = $.ajax({url: link});
