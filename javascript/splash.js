@@ -5,12 +5,12 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("hey");
+	console.log("door");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
   	$("#canvas").remove();
-  	$("audio").pause();
+  	$("audio")[0].pause();
   	var link = $(this).attr("href");
   	var request = $.ajax({url: link});
   	request.done(function(response){
