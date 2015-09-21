@@ -5,15 +5,19 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("808");
+	console.log("787878");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
   	$("#canvas").remove();
-  	$("#audiotag1").pause();
-  	$("#audiotag1").currentTime = 0;
-		$("#audiotag2").pause();
-  	$("#audiotag2").currentTime = 0;
+  // 	$("#audiotag1").pause();
+  // 	$("#audiotag1").currentTime = 0;
+		// $("#audiotag2").pause();
+  // 	$("#audiotag2").currentTime = 0;
+	  $('audio').each(function(){
+	    this.pause(); // Stop playing
+	    this.currentTime = 0; // Reset time
+		}); 
   	var link = $(this).attr("href");
   	var request = $.ajax({url: link});
   	request.done(function(response){
