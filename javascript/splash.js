@@ -5,7 +5,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("teal");
+	console.log("aqua");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
@@ -23,7 +23,21 @@ $(window).load(function() {
 	  		$(".main-content").html(response);
 	  	}
   	});
-  	
 	});
+
+	$(".main-content").on("click", "a", function(event){
+		var link = $(this).attr("href");
+		console.log(link);
+		event.preventDefault();
+		$(".main-content").html("");
+		var request = $.ajax({url: link});
+		  request.done(function(response){
+		  	console.log(response);
+		  	$(".main-content").html(response);
+		  });
+	});
+  	
+
+
 });
 
