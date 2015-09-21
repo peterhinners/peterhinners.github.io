@@ -6,13 +6,13 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("let's see");
+	console.log("hail mary");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	
   	if (typeof pauseMusic == 'function') { 
   		var requestID = requestAnimationFrame(main); 
-  		cancelAnimationFrame(requestID); 
+  		$(window).cancelAnimationFrame(requestID); 
 			};
 
 
