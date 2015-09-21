@@ -312,8 +312,8 @@
 				}
 				if (40 in keysDown) { // Player holding down
 					jerry.y += jerry.speed * modifier;
-					if (jerry.y > 600) {
-			    jerry.y = 600;
+					if (jerry.y > 670) {
+			    jerry.y = 670;
 					}
 				}
 				if (37 in keysDown) { // Player holding left
