@@ -5,7 +5,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("pooh bear");
+	console.log("bear");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	if(typeof pauseMusic == 'function') { 
@@ -20,8 +20,10 @@ $(window).load(function() {
 	  	if(link == "http://peterhinners.github.io"){
 	  		$(".main-content").html("");
 	  		$("#landing").show();
+	  		window.scrollTo(0,0);
 	  	} else {
 	  		$(".main-content").html(response);
+	  		window.scrollTo(0,0);
 	  	}
   	});
 	});
@@ -34,6 +36,7 @@ $(window).load(function() {
 			var request = $.ajax({url: link});
 			  request.done(function(response){
 			  	$(".main-content").html(response);
+			  	window.scrollTo(0,0);
 			  });
 		}	
 	});
