@@ -1,16 +1,17 @@
-$(function() {
-  $('.navbar').load('../navbar.html');
-  $('#landing').load('../landing.html');
   var music1 = document.getElementById("audiotag1"); 
   var music2 = document.getElementById("audiotag2"); 
   function pauseAudio() { 
     music1.pause(); 
     music2.pause();
 	}
+
+$(function() {
+  $('.navbar').load('../navbar.html');
+  $('#landing').load('../landing.html');
 });
 
 $(window).load(function() {
-	console.log("burp");
+	console.log("hello");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
