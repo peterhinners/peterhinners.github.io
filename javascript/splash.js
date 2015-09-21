@@ -5,7 +5,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("purple");
+	console.log("dotssss");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
@@ -26,7 +26,15 @@ $(window).load(function() {
 	$(".main-content").on("click", "a", function(event){
 		var link = $(this).attr("href");
 		if(link == "http://catbreak.herokuapp.com"){
-			} else {
+			} else if(link == "http://peterhinners.github.io/blog/TomJerry.html"){
+			event.preventDefault();
+			$(".main-content").html("");
+			var request = $.ajax({url: link});
+			  request.done(function(response){
+			  	$(".navbar").hide();
+			  	$(".main-content").html(response);
+			  });
+			}	else {
 			event.preventDefault();
 			$(".main-content").html("");
 			var request = $.ajax({url: link});
