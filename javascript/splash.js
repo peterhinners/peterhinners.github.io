@@ -5,24 +5,28 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("green");
+	console.log("beige");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
-  	var link = $(this).attr("href");
-  	console.log(link);
-  	if(link == "http://peterhinners.github.io/blog/index.html"){
-  		console.log("pink");
-  	} else if (link == "http://peterhinners.github.io/blog/projects.html"){
-  		console.log("dog");
-  	}
   	$("#landing").hide();
-  	$(".main-content").hide();
-    var request = $.ajax({url: link});
-    request.done(function(response){
-    	console.log(response);
-    	$(".main-content").append(response);
-    	$(".main-content").show();
-    });
+  	$(".main-content").remove();
+  	var link = $(this).attr("href");
+  	var request = $.ajax({url: link});
+  	request.done(function(response){
+  		console.log(response);
+	  	if(link == "http://peterhinners.github.io/entries.html"){
+	  		console.log("pink");
+	  		console.log(link);
+	  		$(".main-content").append(response);
+	  		$(".main-content").show();
+	  		
+	  	} else if (link == "http://peterhinners.github.io/project-description.html"){
+	  		console.log("dog");
+	  		$(".main-content").append(response);
+	  		$(".main-content").show();
+	  	}
+  	});
+  	
 	});
 });
 
