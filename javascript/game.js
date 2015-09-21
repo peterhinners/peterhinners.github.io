@@ -28,7 +28,7 @@
 			}
 			//canvas
 			// var canvas = document.createElement("canvas");
-			
+			var requestID;
 			var canvas = document.getElementById("canvas");
 			var ctx = canvas.getContext("2d");
 			// canvas.width = 900;
@@ -464,7 +464,7 @@
 
 			// Main game loop
 			var main = function () {
-				
+				requestID = requestAnimationFrame(main);
 				if (ateCheese >= 4) {
 					pauseMusic();
 					playVictory(); // when Jerry wins, play new song
@@ -500,7 +500,7 @@
 			var w = window;
 			requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame || w.msRequestAnimationFrame || w.mozRequestAnimationFrame;
 
-			// cancelAnimationFrame = w.cancelAnimationFrame || w.mozCancelAnimationFrame;
+			cancelAnimationFrame = w.cancelAnimationFrame || w.mozCancelAnimationFrame;
 
 			// Play the game...
 			var then = Date.now();
