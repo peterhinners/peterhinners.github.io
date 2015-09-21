@@ -5,12 +5,15 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("door");
+	console.log("cat");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
   	$("#canvas").remove();
-  	$("audio")[0].pause();
+  	var myAudioTag1 = document.getElementById("audiotag1"); 
+  	myAudioTag1.pause();
+  	var myAudioTag2 = document.getElementById("audiotag2"); 
+  	myAudioTag2.pause();
   	var link = $(this).attr("href");
   	var request = $.ajax({url: link});
   	request.done(function(response){
