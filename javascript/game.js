@@ -26,13 +26,9 @@
 			function playVictory() {
 					toons.play();
 			}
-			//canvas
-			// var canvas = document.createElement("canvas");
-			var requestID;
+			
 			var canvas = document.getElementById("canvas");
 			var ctx = canvas.getContext("2d");
-			// canvas.width = 900;
-			// canvas.height = 700;
 			document.body.appendChild(canvas);
 
 			// Background images
@@ -491,7 +487,7 @@
 				then = now;
 
 				// Request to do this again ASAP
-				requestID = requestAnimationFrame(main);
+				requestAnimationFrame(main);
 			}
 
 
@@ -499,8 +495,6 @@
 			// Cross-browser support for requestAnimationFrame
 			var w = window;
 			requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame || w.msRequestAnimationFrame || w.mozRequestAnimationFrame;
-
-			cancelAnimationFrame = w.cancelAnimationFrame || w.mozCancelAnimationFrame;
 
 			// Play the game...
 			var then = Date.now();
