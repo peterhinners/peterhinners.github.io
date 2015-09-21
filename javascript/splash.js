@@ -6,12 +6,13 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("help");
+	console.log("let's see");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	
   	if (typeof pauseMusic == 'function') { 
-  		cancelAnimationFrame(requestAnimationFrame); 
+  		var requestID = requestAnimationFrame(main); 
+  		cancelAnimationFrame(requestID); 
 			};
 
 
