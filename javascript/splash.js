@@ -5,7 +5,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("blue");
+	console.log("teal");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
@@ -14,16 +14,13 @@ $(window).load(function() {
   	var request = $.ajax({url: link});
   	request.done(function(response){
   		console.log(response);
-	  	if(link == "http://peterhinners.github.io/entries.html"){
-	  		console.log("pink");
-	  		console.log(link);
-	  		$(".main-content").append(response);
-	  		$(".main-content").show();
+	  	if(link == "http://peterhinners.github.io"){
+	  		$(".main-content").html("");
+	  		$("#landing").show();
 	  		
-	  	} else if (link == "http://peterhinners.github.io/project-description.html"){
+	  	} else {
 	  		console.log("dog");
 	  		$(".main-content").html(response);
-	  		
 	  	}
   	});
   	
