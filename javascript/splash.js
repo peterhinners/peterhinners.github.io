@@ -9,7 +9,6 @@ $(window).load(function() {
   	event.preventDefault();
   	if(typeof pauseMusic == 'function') { 
   		pauseMusic();
-  		pauseToons();
 			}
   	$("#landing").hide();
   	$("#canvas").remove();
