@@ -12,12 +12,12 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("yoyo");
+	console.log("test2");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
   	$("#canvas").remove();
-  	pauseAudio();
+  	
   	
   	
   	var link = $(this).attr("href");
