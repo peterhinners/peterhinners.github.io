@@ -7,9 +7,14 @@ $(function() {
 $(window).load(function() {
 	console.log("purple");
   $(".navbar").on("click", "a", function(event){
+  	event.preventDefault();
   	var link = $(this).attr("href");
   	console.log(link);
-  	event.preventDefault();
+  	if(link == "http://peterhinners.github.io/blog/index.html"){
+  		console.log("pink");
+  	} else if (link == "http://peterhinners.github.io/blog/projects.html"){
+  		console.log("dog");
+  	}
   	$("#landing").hide();
   	$(".main-content").hide();
     var request = $.ajax({url: link});
