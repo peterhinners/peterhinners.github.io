@@ -27,14 +27,7 @@ $(window).load(function() {
 		var link = $(this).attr("href");
 		if(link == "http://catbreak.herokuapp.com"){
 			} else if(link == "http://peterhinners.github.io/blog/TomJerry.html"){
-			event.preventDefault();
-			$(".navbar").hide();
-			// $(".main-content").html("");
-			var request = $.ajax({url: link});
-			  request.done(function(response){
-			  	// $(".navbar").hide();
-			  	$(".main-content").html(response);
-			  });
+			
 			}	else {
 			event.preventDefault();
 			$(".main-content").html("");
