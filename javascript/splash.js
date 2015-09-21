@@ -5,7 +5,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("rad");
+	console.log("colon");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
@@ -33,8 +33,8 @@ $(window).load(function() {
 			  request.done(function(response){
 			  	$(".main-content").html(response);
 			  });
-		} else {}
-		});
+		} else {};
+		
 	});
   	
 
