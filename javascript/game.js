@@ -20,13 +20,8 @@
 				toons.volume = 0;
 			}
 
-			function pauseToons() {
-				toons.pause();
-				toons.currentTime=0;
-				toons.volume = 0;
-			}
-
 			function playVictory() {
+					toons.volume = 1;
 					toons.play();
 			}
 			//canvas
@@ -468,7 +463,7 @@
 			// Main game loop
 			var main = function () {
 				
-				if (ateCheese >= 15) {
+				if (ateCheese >= 4) {
 					pauseMusic();
 					playVictory(); // when Jerry wins, play new song
 				} else {
@@ -485,7 +480,7 @@
 					&& tom.y <= (jerry.y + 32) // Tom wakes up
 				) {
 					render2();
-			} else if (ateCheese < 15) {
+			} else if (ateCheese < 4) {
 						render(); // If haven't eaten 15 pieces of cheese yet do the main render
 				} else {
 						render3(); // If Jerry ate 15 pieces, do the win game render 3.

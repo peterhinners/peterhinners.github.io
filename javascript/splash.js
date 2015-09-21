@@ -4,7 +4,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("time for break");
+	console.log("toons");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	if(typeof pauseMusic == 'function') { 
