@@ -1,6 +1,6 @@
 
 	//Big props to http://www.lostdecadegames.com/how-to-make-a-simple-html5-canvas-game/ for creating an awesome tutorial.
-
+			window.scrollTo(0,document.body.scrollHeight);
 			var music = document.getElementById("audiotag1");
 			function playMusic() {
 				music.play();
