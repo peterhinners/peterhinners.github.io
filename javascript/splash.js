@@ -1,7 +1,9 @@
   var music1 = document.getElementById("audiotag1"); 
   var music2 = document.getElementById("audiotag2"); 
   function pauseAudio() { 
-    $.each($('audio'), function () { this.pause(); });
+    $.each($('audio'), function () {
+    	$(this).AudioPlayerV1('pause');
+		});
 	}
 
 $(function() {
@@ -10,7 +12,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("hopeful");
+	console.log("hmm");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
@@ -24,9 +26,11 @@ $(window).load(function() {
 	  	if(link == "http://peterhinners.github.io"){
 	  		$(".main-content").html("");
 	  		$("#landing").show();
+	  		pauseAudio();
 	  		
 	  	} else {
 	  		$(".main-content").html(response);
+	  		pauseAudio();
 	  	}
   	});
 	});
@@ -48,6 +52,7 @@ $(window).load(function() {
 			$(".main-content").html("");
 			var request = $.ajax({url: link});
 			  request.done(function(response){
+			  	pauseAudio();
 			  	$(".main-content").html(response);
 			  });
 		}
