@@ -5,7 +5,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("canvas");
+	console.log("folders");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
