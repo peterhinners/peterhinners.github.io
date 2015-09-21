@@ -4,13 +4,13 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("let's see");
+	console.log("hmmm");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	if(typeof pauseMusic == 'function') { 
   		// pauseMusic();
   		// pauseToons();
-  		requestID = requestAnimationFrame(main);
+  		
   		$(window).cancelAnimationFrame(requestID);
 			}
   	$("#landing").hide();
