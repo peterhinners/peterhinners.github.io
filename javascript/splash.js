@@ -5,7 +5,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("purple");
+	console.log("tired");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
@@ -46,6 +46,7 @@ $(window).load(function() {
 		
 	});
   	
+  	$("#canvas").bind("wheel mousewheel", function(e) {e.preventDefault()});
 
 
 });
