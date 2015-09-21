@@ -5,7 +5,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("tired");
+	console.log("blop");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
@@ -46,8 +46,15 @@ $(window).load(function() {
 		
 	});
   	
-  	$("#canvas").bind("wheel mousewheel", function(e) {e.preventDefault()});
+  	
 
 
 });
+
+window.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);
 
