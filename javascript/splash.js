@@ -5,7 +5,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("purple");
+	console.log("green");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	var link = $(this).attr("href");
