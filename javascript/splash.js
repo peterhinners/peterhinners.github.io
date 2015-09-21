@@ -1,8 +1,8 @@
   var music1 = document.getElementById("audiotag1"); 
   var music2 = document.getElementById("audiotag2"); 
   function pauseAudio() { 
-    music1.pause(); 
-    music2.pause();
+    if(music1){music1.pause();} 
+    if(music2){music2.pause();}
 	}
 
 $(function() {
@@ -11,7 +11,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("hello");
+	console.log("yummy");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
