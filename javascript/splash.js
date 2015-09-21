@@ -1,8 +1,7 @@
   var music1 = document.getElementById("audiotag1"); 
   var music2 = document.getElementById("audiotag2"); 
   function pauseAudio() { 
-    if(music1){music1.pause();} 
-    if(music2){music2.pause();}
+    $.each($('audio'), function () { this.pause(); });
 	}
 
 $(function() {
@@ -11,7 +10,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("yummy");
+	console.log("hopeful");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
