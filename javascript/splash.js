@@ -5,11 +5,11 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("white");
+	console.log("blue");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
-  	$(".main-content").hide();
+  	$(".main-content").html("");
   	var link = $(this).attr("href");
   	var request = $.ajax({url: link});
   	request.done(function(response){
@@ -22,8 +22,8 @@ $(window).load(function() {
 	  		
 	  	} else if (link == "http://peterhinners.github.io/project-description.html"){
 	  		console.log("dog");
-	  		$(".main-content").append(response);
-	  		$(".main-content").show();
+	  		$(".main-content").html(response);
+	  		
 	  	}
   	});
   	
