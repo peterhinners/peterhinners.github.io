@@ -12,6 +12,7 @@
 
 			function pauseMusic () {
 				music.pause();
+				music.currentTime=0;
 
 			}
 			function playVictory() {

@@ -6,7 +6,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("goal");
+	console.log("yeppers");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	
