@@ -31,12 +31,10 @@ $(window).load(function() {
 			$(".main-content").html("");
 			var request = $.ajax({url: link});
 			  request.done(function(response){
-			  	console.log(response);
 			  	$(".main-content").html(response);
 			  });
-			};
-
 		} else {};
+		};
 	});
   	
 
