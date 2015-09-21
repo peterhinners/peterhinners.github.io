@@ -1,10 +1,4 @@
-  var music1 = document.getElementById("audiotag1"); 
-  var music2 = document.getElementById("audiotag2"); 
-  function pauseAudio() { 
-    $.each($('audio'), function () {
-    	$(this).AudioPlayerV1('pause');
-		});
-	}
+
 
 $(function() {
   $('.navbar').load('../navbar.html');
@@ -12,9 +6,10 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("test2");
+	console.log("hat trick");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
+  	if(pauseMusic()){pauseMusic();};
   	$("#landing").hide();
   	$("#canvas").remove();
   	
