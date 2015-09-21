@@ -5,7 +5,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("bear");
+	console.log("pooh bear");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	if(typeof pauseMusic == 'function') { 
@@ -36,7 +36,7 @@ $(window).load(function() {
 			var request = $.ajax({url: link});
 			  request.done(function(response){
 			  	$(".main-content").html(response);
-			  	window.scrollTo(0,0);
+			  	
 			  });
 		}	
 	});
