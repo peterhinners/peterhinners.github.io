@@ -6,10 +6,15 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("hat trick");
+	console.log("goal");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
-  	if(pauseMusic()){pauseMusic();};
+  	
+  	if (typeof pauseMusic == 'function') { 
+  		pauseMusic(); 
+			};
+
+
   	$("#landing").hide();
   	$("#canvas").remove();
   	
