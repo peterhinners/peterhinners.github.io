@@ -6,12 +6,12 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("yikes");
+	console.log("help");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	
   	if (typeof pauseMusic == 'function') { 
-  		cancelAnimationFrame(requestID); 
+  		cancelAnimationFrame(requestAnimationFrame); 
 			};
 
 

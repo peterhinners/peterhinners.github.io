@@ -456,7 +456,7 @@
 
 			// Main game loop
 			var main = function () {
-				requestID = requestAnimationFrame(main);
+				
 				if (ateCheese >= 15) {
 					pauseMusic();
 					playVictory(); // when Jerry wins, play new song
