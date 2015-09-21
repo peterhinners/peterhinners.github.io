@@ -1,15 +1,21 @@
 $(function() {
   $('.navbar').load('../navbar.html');
   $('#landing').load('../landing.html');
-  
+  var music1 = document.getElementById("audiotag1"); 
+  var music2 = document.getElementById("audiotag2"); 
+  function pauseAudio() { 
+    music1.pause(); 
+    music2.pause();
+	}
 });
 
 $(window).load(function() {
-	console.log("hey");
+	console.log("burp");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
   	$("#canvas").remove();
+  	pauseAudio();
   	
   	
   	var link = $(this).attr("href");
