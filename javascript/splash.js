@@ -12,7 +12,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("hmm");
+	console.log("nope");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
@@ -26,11 +26,11 @@ $(window).load(function() {
 	  	if(link == "http://peterhinners.github.io"){
 	  		$(".main-content").html("");
 	  		$("#landing").show();
-	  		pauseAudio();
+	  		
 	  		
 	  	} else {
 	  		$(".main-content").html(response);
-	  		pauseAudio();
+	  		
 	  	}
   	});
 	});
@@ -52,7 +52,7 @@ $(window).load(function() {
 			$(".main-content").html("");
 			var request = $.ajax({url: link});
 			  request.done(function(response){
-			  	pauseAudio();
+			  	
 			  	$(".main-content").html(response);
 			  });
 		}
