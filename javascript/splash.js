@@ -1,7 +1,6 @@
 $(function() {
   $('.navbar').load('../navbar.html');
   $('#landing').load('../landing.html');
-  window.scrollTo(0,0);
 });
 
 $(window).load(function() {
