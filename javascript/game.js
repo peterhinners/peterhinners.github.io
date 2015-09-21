@@ -15,7 +15,8 @@
 
 			}
 			function playVictory() {
-					document.getElementById('audiotag2').play();
+					music = document.getElementById('audiotag2');
+					music.play();
 			}
 			//canvas
 			// var canvas = document.createElement("canvas");
