@@ -1,10 +1,11 @@
 $(function() {
   $('.navbar').load('../navbar.html');
   $('#landing').load('../landing.html');
+  window.scrollTo(0,0);
 });
 
 $(window).load(function() {
-	console.log("yodle");
+	console.log("pooh bear");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	if(typeof pauseMusic == 'function') { 
