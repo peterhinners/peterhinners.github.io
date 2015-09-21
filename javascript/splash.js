@@ -1,11 +1,11 @@
 $(function() {
   $('.navbar').load('../navbar.html');
   $('#landing').load('../landing.html');
-  $('audio').each(function(){ this.pause() });
+  
 });
 
 $(window).load(function() {
-	console.log("yoyoma");
+	console.log("music");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
