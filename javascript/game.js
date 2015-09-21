@@ -2,6 +2,7 @@
 	//Big props to http://www.lostdecadegames.com/how-to-make-a-simple-html5-canvas-game/ for creating an awesome tutorial.
 			window.scrollTo(0,document.body.scrollHeight);
 			var music = document.getElementById("audiotag1");
+			var toons = document.getElementById("audiotag2");
 			function playMusic() {
 				music.play();
 			}
@@ -13,14 +14,21 @@
 			function pauseMusic () {
 				music.pause();
 				music.currentTime=0;
-
+				music.volume = 0;
 			}
+
+			function pauseToons() {
+				toons.pause();
+				toons.currentTime=0;
+				toons.volume = 0;
+			}
+
 			function playVictory() {
-					document.getElementById('audiotag2').play();
+					toons.play();
 			}
 			//canvas
 			// var canvas = document.createElement("canvas");
-			var requestID; 
+			
 			var canvas = document.getElementById("canvas");
 			var ctx = canvas.getContext("2d");
 			// canvas.width = 900;
@@ -492,7 +500,7 @@
 			var w = window;
 			requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame || w.msRequestAnimationFrame || w.mozRequestAnimationFrame;
 
-			cancelAnimationFrame = w.cancelAnimationFrame || w.mozCancelAnimationFrame;
+			// cancelAnimationFrame = w.cancelAnimationFrame || w.mozCancelAnimationFrame;
 
 			// Play the game...
 			var then = Date.now();

@@ -6,13 +6,16 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("ok");
+	console.log("ready for break");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	
   	if (typeof pauseMusic == 'function') { 
-  		requestID = requestAnimationFrame(main); 
-  		$(window).cancelAnimationFrame(requestID); 
+  		// requestID = requestAnimationFrame(main); 
+  		// $(window).cancelAnimationFrame(requestID); 
+
+  		pauseMusic();
+  		pauseToons();
 			}
 
 
