@@ -1,22 +1,24 @@
 
 	//Big props to http://www.lostdecadegames.com/how-to-make-a-simple-html5-canvas-game/ for creating an awesome tutorial.
 			window.scrollTo(0,document.body.scrollHeight);
-			var music = document.getElementById("audiotag1");
+			var music1 = document.getElementById("audiotag1");
+			var music2 = document.getElementById('audiotag2');
 			function playMusic() {
-				music.play();
+				music1.play();
 			}
 
 			function loadMusic () {
-				music.load();
+				music1.load();
 			}
 
 			function pauseMusic () {
-				music.pause();
+				music1.pause();
+				music2.pause();
 
 			}
 			function playVictory() {
-					music = document.getElementById('audiotag2');
-					music.play();
+					
+					music2.play();
 			}
 			//canvas
 			// var canvas = document.createElement("canvas");
