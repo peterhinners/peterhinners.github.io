@@ -1,16 +1,16 @@
 $(function() {
   $('.navbar').load('../navbar.html');
   $('#landing').load('../landing.html');
-  
+  $('audio').each(function(){ this.pause() });
 });
 
 $(window).load(function() {
-	console.log("tom");
+	console.log("yoyoma");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
   	$("#canvas").remove();
-  	$('audio').each(function(){ this.pause() });
+  	
   	
   	var link = $(this).attr("href");
   	var request = $.ajax({url: link});
