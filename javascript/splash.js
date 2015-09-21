@@ -6,14 +6,14 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("hail mary");
+	console.log("ok");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	
   	if (typeof pauseMusic == 'function') { 
-  		var requestID = requestAnimationFrame(main); 
+  		requestID = requestAnimationFrame(main); 
   		$(window).cancelAnimationFrame(requestID); 
-			};
+			}
 
 
   	$("#landing").hide();
