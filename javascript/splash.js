@@ -5,7 +5,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("barca");
+	console.log("rad");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
@@ -33,8 +33,8 @@ $(window).load(function() {
 			  request.done(function(response){
 			  	$(".main-content").html(response);
 			  });
-		} else {};
-		};
+		} else {}
+		});
 	});
   	
 
