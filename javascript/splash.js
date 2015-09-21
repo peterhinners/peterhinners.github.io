@@ -5,11 +5,12 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("pan");
+	console.log("madrid");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	$("#landing").hide();
   	$(".main-content").html("");
+  	$("#canvas").remove();
   	var link = $(this).attr("href");
   	var request = $.ajax({url: link});
   	request.done(function(response){
