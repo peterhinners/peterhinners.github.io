@@ -4,11 +4,12 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("toons");
+	console.log("muchacha");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	if(typeof pauseMusic == 'function') { 
   		pauseMusic();
+  		pauseToons();
 			}
   	$("#landing").hide();
   	$("#canvas").remove();

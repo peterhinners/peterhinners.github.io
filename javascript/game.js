@@ -15,13 +15,15 @@
 				music.pause();
 				music.currentTime=0;
 				music.volume = 0;
+			}
+
+			function pauseToons() {
 				toons.pause();
 				toons.currentTime=0;
 				toons.volume = 0;
 			}
 
 			function playVictory() {
-					toons.volume = 1;
 					toons.play();
 			}
 			//canvas
