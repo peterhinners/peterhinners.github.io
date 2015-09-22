@@ -16,24 +16,28 @@ section {
   width: 50%;
 }
 
+#firstimage {
+  max-width: 100%;
+}
+
+#hashexample {
+  max-width: 100%;
+}
+
 #mapexample {
-  width: 50%;
-  height: 50%;
+  max-width: 100%;
 }
 
 #cheatsheet {
-  width: 50%;
-  height: 50%;
+  max-width: 100%;
 }
 
 #classchess {
-  width: 50%;
-  height: 50%;
+  max-width: 100%;
 }
 
 #chessboard {
-  width: 50%;
-  height: 50%;
+  max-width: 100%;
 }
 
 #actual-content h4 {
