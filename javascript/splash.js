@@ -6,7 +6,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("audio");
+	console.log("audio2");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	if(typeof pauseMusic == 'function') { 
@@ -24,7 +24,7 @@ $(window).load(function() {
 	  		window.scrollTo(0,0);
 	  	} else {
 	  		$(".main-content").html(response);
-	  		audio = document.getElementById("#audiotag1");
+	  		
 	  		window.scrollTo(0,0);
 	  	}
   	});
@@ -36,7 +36,7 @@ $(window).load(function() {
 			}	else {
 			event.preventDefault();
 			
-			
+			audio = document.getElementById("#audiotag1");
 			audio.play();
 			
 			var request = $.ajax({url: link});
