@@ -1,10 +1,12 @@
+var audio;
+
 $(function() {
   $('.navbar').load('../navbar.html');
   $('#landing').load('../landing.html');
 });
 
 $(window).load(function() {
-	console.log("pooh bear");
+	console.log("audio");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	if(typeof pauseMusic == 'function') { 
@@ -22,6 +24,7 @@ $(window).load(function() {
 	  		window.scrollTo(0,0);
 	  	} else {
 	  		$(".main-content").html(response);
+	  		audio = document.getElementById("#audiotag1");
 	  		window.scrollTo(0,0);
 	  	}
   	});
@@ -32,6 +35,10 @@ $(window).load(function() {
 		if(link == "http://catbreak.herokuapp.com"){
 			}	else {
 			event.preventDefault();
+			
+			
+			audio.play();
+			
 			var request = $.ajax({url: link});
 			  request.done(function(response){
 			  	$(".main-content").html(response);
