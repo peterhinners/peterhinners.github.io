@@ -31,7 +31,7 @@ $(window).load(function() {
 
 	$(".main-content").on("click", "a", function(event){
 		var link = $(this).attr("href");
-		if(link == "http://catbreak.herokuapp.com"){
+		if(link == "http://catbreak.herokuapp.com" || link == "http://devbootcamp.com/"){
 			}	else if(link == "http://peterhinners.github.io/blog/TomJerry.html"){
 				event.preventDefault();
 				var request = $.ajax({url: link});
