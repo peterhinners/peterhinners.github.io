@@ -167,17 +167,17 @@ li {
 
 img {
   max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 #firstjapchar {
-  display: block;
-  margin: 0 auto;
+  
   margin-top: -25px;
 }
 
 #secondjapchar {
-  display: block;
-  margin: 0 auto;
+ 
   margin-top: -75px
 }
 
