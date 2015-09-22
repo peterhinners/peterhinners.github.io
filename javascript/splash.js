@@ -1,4 +1,4 @@
-var audio;
+
 
 $(function() {
   $('.navbar').load('../navbar.html');
@@ -6,7 +6,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("audio2");
+	console.log("details");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	if(typeof pauseMusic == 'function') { 
@@ -24,7 +24,6 @@ $(window).load(function() {
 	  		window.scrollTo(0,0);
 	  	} else {
 	  		$(".main-content").html(response);
-	  		
 	  		window.scrollTo(0,0);
 	  	}
   	});
@@ -33,17 +32,19 @@ $(window).load(function() {
 	$(".main-content").on("click", "a", function(event){
 		var link = $(this).attr("href");
 		if(link == "http://catbreak.herokuapp.com"){
-			}	else {
-			event.preventDefault();
-			
-			audio = document.getElementById("#audiotag1");
-			audio.play();
-			
-			var request = $.ajax({url: link});
+			}	else if(link == "http://peterhinners.github.io/blog/TomJerry.html"){
+				event.preventDefault();
+				var request = $.ajax({url: link});
 			  request.done(function(response){
 			  	$(".main-content").html(response);
-			  	
 			  });
+			}	else {
+				event.preventDefault();
+				var request = $.ajax({url: link});
+			  request.done(function(response){
+			  	$(".main-content").html(response);
+				  window.scrollTo(0,0);
+				});
 		}	
 	});
 });
