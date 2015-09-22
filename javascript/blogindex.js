@@ -1,4 +1,4 @@
-$(function() {
-	console.log("burger");
-  $('.entries').load('../entries.html');
-});
+// $(function() {
+// 	console.log("burger");
+//   $('.entries').load('../entries.html');
+// });
