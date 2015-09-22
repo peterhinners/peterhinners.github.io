@@ -30,6 +30,10 @@
     width: 100%;
 }
 
+#landing {
+  position: relative;
+}
+
 #actual-content h4 {
   text-align: center;
   margin-left: 150px;
