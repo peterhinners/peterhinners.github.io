@@ -31,7 +31,7 @@
 }
 
 #landing {
-  position: absolute;
+  display: block;
 }
 
 #actual-content h4 {
