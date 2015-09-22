@@ -27,6 +27,7 @@
 .navbar {
   position: fixed;
     top: 0px;
+    width: 100%;
 }
 
 #actual-content h4 {
