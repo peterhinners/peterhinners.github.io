@@ -1,3 +1,8 @@
+#bootcamp {
+  text-decoration: none;
+  color: #0F8EFE;
+}
+
 
 p {
   font-family: 'Libre Baskerville', serif;
@@ -184,7 +189,3 @@ img {
   }
 }
 
-#bootcamp {
-  text-decoration: none;
-  color: #0F8EFE;
-}
