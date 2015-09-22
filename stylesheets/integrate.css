@@ -2,7 +2,8 @@
 p {
   font-family: 'Libre Baskerville', serif;
   font-size: 17px;
-  color: #666666;
+  /*color: #666666;*/
+  color: black;
   line-height: 130%;
 }
 
