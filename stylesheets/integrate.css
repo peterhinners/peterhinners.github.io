@@ -16,7 +16,7 @@ section {
   width: 50%;
 }
 
-/*#firstimage {
+#firstimage {
   max-width: 100%;
 }
 
@@ -40,7 +40,7 @@ section {
   max-width: 100%;
 }
 
-#actual-content h4 {
+/*#actual-content h4 {
   text-align: center;
   margin-left: 150px;
   margin-right: 150px;
@@ -166,7 +166,8 @@ li {
 }
 
 img {
-  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 #firstjapchar {
