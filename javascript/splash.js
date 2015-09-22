@@ -6,7 +6,7 @@ $(function() {
 });
 
 $(window).load(function() {
-	console.log("normal");
+	console.log("css");
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	if(typeof pauseMusic == 'function') { 
