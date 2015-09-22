@@ -24,7 +24,10 @@
     height: auto;
     
 }*/
-
+.navbar {
+  position: fixed;
+    top: 0px;
+}
 
 #actual-content h4 {
   text-align: center;
