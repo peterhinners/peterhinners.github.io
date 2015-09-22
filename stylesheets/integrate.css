@@ -16,7 +16,7 @@ section {
   width: 50%;
 }
 
-#firstimage {
+/*#firstimage {
   max-width: 100%;
 }
 
@@ -38,7 +38,7 @@ section {
 
 #chessboard {
   max-width: 100%;
-}
+}*/
 
 /*#actual-content h4 {
   text-align: center;
@@ -166,15 +166,18 @@ li {
 }
 
 img {
-  display: block;
-  margin: 0 auto;
+  max-width: 100%;
 }
 
 #firstjapchar {
+  display: block;
+  margin: 0 auto;
   margin-top: -25px;
 }
 
 #secondjapchar {
+  display: block;
+  margin: 0 auto;
   margin-top: -75px
 }
 
