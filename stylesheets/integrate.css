@@ -16,41 +16,31 @@ section {
   width: 50%;
 }
 
-/*#firstimage {
-  max-width: 100%;
-}
-
-#hashexample {
-  max-width: 100%;
-}
-
-#mapexample {
-  max-width: 100%;
-}
-
-#cheatsheet {
-  max-width: 100%;
-}
-
-#classchess {
-  max-width: 100%;
-}
-
-#chessboard {
-  max-width: 100%;
-}*/
-
-/*#actual-content h4 {
-  text-align: center;
-  margin-left: 150px;
-  margin-right: 150px;
-}*/
-
 h1 {
   text-align: center;
   font-family: 'Julius Sans One', sans-serif;
   font-size: 50px;
   font-weight: bold;
+  color: black;
+}
+
+h1 a:link {
+  color: black;
+}
+
+h1 a:hover {
+  color: black;
+}
+
+h1 a:active {
+  color: black;
+}
+
+h1 a {
+  text-decoration: none;
+}
+
+h1 a:visited {
   color: black;
 }
 
@@ -75,7 +65,7 @@ h5 {
   color: #FF9900;
 }
 
-.create-stuff {
+/*.create-stuff {
   text-align: center;
   font-family: 'Julius Sans One', sans-serif;
   font-size: 15px;
@@ -90,27 +80,9 @@ h5 {
 
 .create-stuff a:hover {
   color: #FF9900;
-}
+}*/
 
-h1 a:link {
-  color: black;
-}
 
-h1 a:hover {
-  color: black;
-}
-
-h1 a:active {
-  color: black;
-}
-
-h1 a {
-  text-decoration: none;
-}
-
-h1 a:visited {
-  color: black;
-}
 
 li a:link {
   color: black;
