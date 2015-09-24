@@ -120,7 +120,7 @@ ul {
 
 nav li {
   display: inline;
-  
+  padding:5%;
   margin: 0;
   line-height: 30px;
   text-align: center;
