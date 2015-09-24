@@ -1,12 +1,15 @@
 
 
-$(function() {
-  $('.navbar').load('../navbar.html');
-  $('#landing').load('../landing.html');
-});
+// $(function() {
+//   $('.navbar').load('../navbar.html');
+//   $('#landing').load('../landing.html');
+// });
 
 $(window).load(function() {
-	console.log("css");
+	console.log("hey");
+
+	// $('#landing').load('../landing.html');
+
   $(".navbar").on("click", "a", function(event){
   	event.preventDefault();
   	if(typeof pauseMusic == 'function') { 
