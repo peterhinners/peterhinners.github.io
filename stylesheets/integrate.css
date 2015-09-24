@@ -133,7 +133,7 @@ nav li {
 
 
 li {
-  display: inline;
+  display: block;
   margin: 0;
   line-height: 30px;
   text-align: center;
