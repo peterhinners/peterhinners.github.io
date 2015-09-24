@@ -19,7 +19,7 @@ body {
 section {
   margin-right: auto;
   margin-left: auto;
-  width: 66%;
+  max-width: 66%;
 }
 
 h1 {
