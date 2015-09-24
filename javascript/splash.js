@@ -5,8 +5,10 @@
 //   $('#landing').load('../landing.html');
 // });
 
-$(window).load(function() {
-	console.log("hey");
+// $(window).load(function() {
+
+$(function() {	
+	console.log("yo");
 
 	// $('#landing').load('../landing.html');
 
