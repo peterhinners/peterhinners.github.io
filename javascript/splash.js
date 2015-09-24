@@ -8,7 +8,7 @@
 // $(window).load(function() {
 
 $(function() {	
-	console.log("fun");
+	console.log("ok");
 
 	// $('#landing').load('../landing.html');
 
