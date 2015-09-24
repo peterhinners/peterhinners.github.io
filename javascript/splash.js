@@ -8,7 +8,7 @@
 // $(window).load(function() {
 
 $(function() {	
-	console.log("wheel");
+	console.log("again");
 
 	// $('#landing').load('../landing.html');
 
