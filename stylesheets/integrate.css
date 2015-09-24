@@ -75,25 +75,6 @@ h5 {
   color: #FF9900;
 }
 
-/*.create-stuff {
-  text-align: center;
-  font-family: 'Julius Sans One', sans-serif;
-  font-size: 15px;
-  color: #FF9900;
-}
-
-.create-stuff a {
-  text-align: center;
-  text-decoration: none;
-  color: black;
-}
-
-.create-stuff a:hover {
-  color: #FF9900;
-}*/
-
-
-
 li a:link {
   color: black;
 }
@@ -159,14 +140,6 @@ img {
  
   margin-top: -75px
 }
-
-/*#signfooter {
-  max-width: 700px;
-  min-width: 300px;
-  margin-right: auto;
-  margin-left: auto;
-  clear:both;
-}*/
 
 .container {
   margin: 0;
