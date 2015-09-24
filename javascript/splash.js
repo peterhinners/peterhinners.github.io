@@ -8,30 +8,33 @@
 // $(window).load(function() {
 
 $(function() {	
-	console.log("fun");
+	console.log("yippee");
 
-	// $('#landing').load('../landing.html');
+	$('.navbar').load('../navbar.html');
+  $('.main-content').load('../landing.html');
+
+	
 
   $(".navbar").on("click", "a", function(event){
-  	event.preventDefault();
   	if(typeof pauseMusic == 'function') { 
   		pauseMusic();
   		pauseToons();
+  		$("#canvas").remove();
 			}
-  	$("#landing").hide();
-  	$("#canvas").remove();
+
+
+  	
   	var link = $(this).attr("href");
-  	var request = $.ajax({url: link});
-  	request.done(function(response){
-	  	if(link == "http://peterhinners.github.io"){
-	  		$(".main-content").html("");
-	  		$("#landing").show();
-	  		window.scrollTo(0,0);
-	  	} else {
-	  		$(".main-content").html(response);
-	  		window.scrollTo(0,0);
-	  	}
-  	});
+
+  	if(link == "http://peterhinners.github.io"){
+  	} else {
+	  	event.preventDefault();
+	  	var request = $.ajax({url: link});
+	  	request.done(function(response){
+		  		$(".main-content").html(response);
+		  		window.scrollTo(0,0);
+	  	});
+	  }
 	});
 
 	$(".main-content").on("click", "a", function(event){
