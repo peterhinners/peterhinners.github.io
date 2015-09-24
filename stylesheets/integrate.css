@@ -3,6 +3,10 @@
   color: #0F8EFE;
 }
 
+#entry-page {
+  font-family: 'Libre Baskerville', serif;
+  display: block; 
+}
 
 p {
   font-family: 'Libre Baskerville', serif;
@@ -126,10 +130,7 @@ nav li {
   text-align: center;
 }
 
-#entry-page {
-  font-family: 'Libre Baskerville', serif;
-  display: block; 
-}
+
 
 li {
   display: inline;
