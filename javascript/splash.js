@@ -1,14 +1,14 @@
 
 
+
 // $(function() {
 //   $('.navbar').load('../navbar.html');
 //   $('#landing').load('../landing.html');
 // });
 
-// $(window).load(function() {
+$(window).load(function() {
 
-$(function() {	
-	console.log("yo");
+	console.log("oops");
 
 	// $('#landing').load('../landing.html');
 
