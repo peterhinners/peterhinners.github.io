@@ -8,7 +8,7 @@
 // $(window).load(function() {
 
 $(function() {	
-	console.log("linkedin");
+	console.log("linkedin2");
 
 	$('.navbar').load('../navbar.html');
   $('.main-content').load('../landing.html');
