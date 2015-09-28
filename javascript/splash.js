@@ -26,7 +26,7 @@ $(function() {
   	
   	var link = $(this).attr("href");
 
-  	if(link == "http://peterhinners.github.io" || link == "mailto:peterhinners@gmail.com){
+  	if(link == "http://peterhinners.github.io" || link == "mailto:peterhinners@gmail.com"){
   	} else if(link == "http://peterhinners.github.io/contact.html"){
   		event.preventDefault();
   		console.log("working");
