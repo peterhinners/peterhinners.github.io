@@ -8,7 +8,7 @@
 // $(window).load(function() {
 
 $(function() {	
-	console.log("eggs");
+	console.log("peaches");
 
 	$('.navbar').load('../navbar.html');
   $('.main-content').load('../landing.html');
@@ -34,7 +34,10 @@ $(function() {
   		request.done(function(response){
   			$('.navbar').html(response);
   		});
-  	}	else {
+  	}	else if(link == "http://peterhinners.github.io/menu.html"){
+  			event.preventDefault();
+  			$('.navbar').load('../navbar.html');
+  	} else {
 	  	event.preventDefault();
 	  	var request = $.ajax({url: link});
 	  	request.done(function(response){
