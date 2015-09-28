@@ -8,7 +8,7 @@
 // $(window).load(function() {
 
 $(function() {	
-	console.log("linkedin6");
+	console.log("github");
 
 	$('.navbar').load('../navbar.html');
   $('.main-content').load('../landing.html');
