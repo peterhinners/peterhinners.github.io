@@ -8,7 +8,7 @@
 // $(window).load(function() {
 
 $(function() {	
-	console.log("project");
+	console.log("project2");
 
 	$('.navbar').load('../navbar.html');
   $('.main-content').load('../landing.html');
@@ -26,7 +26,7 @@ $(function() {
   	
   	var link = $(this).attr("href");
 
-  	if(link == "http://peterhinners.github.io" || link == "mailto:peterhinners@gmail.com" || link == "https://www.linkedin.com/in/petehinners" || link == "https://github.com/peterhinners" || link == "http://peterhinners.github.io/imgs/peterhinners.pdf" || link == "http://donation-cat.herokuapp.com/"){
+  	if(link == "http://peterhinners.github.io" || link == "mailto:peterhinners@gmail.com" || link == "https://www.linkedin.com/in/petehinners" || link == "https://github.com/peterhinners" || link == "http://peterhinners.github.io/imgs/peterhinners.pdf"){
   	} else if(link == "http://peterhinners.github.io/contact.html"){
   		event.preventDefault();
   		console.log("working");
@@ -49,7 +49,7 @@ $(function() {
 
 	$(".main-content").on("click", "a", function(event){
 		var link = $(this).attr("href");
-		if(link == "http://catbreak.herokuapp.com" || link == "http://devbootcamp.com/"){
+		if(link == "http://catbreak.herokuapp.com" || link == "http://devbootcamp.com/" || link == "http://donation-cat.herokuapp.com/"){
 			}	else if(link == "http://peterhinners.github.io/blog/TomJerry.html"){
 				event.preventDefault();
 				var request = $.ajax({url: link});
