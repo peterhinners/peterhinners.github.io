@@ -8,7 +8,7 @@
 // $(window).load(function() {
 
 $(function() {	
-	console.log("github");
+	console.log("github2");
 
 	$('.navbar').load('../navbar.html');
   $('.main-content').load('../landing.html');
@@ -26,7 +26,7 @@ $(function() {
   	
   	var link = $(this).attr("href");
 
-  	if(link == "http://peterhinners.github.io" || link == "mailto:peterhinners@gmail.com" || link == "https://www.linkedin.com/in/petehinners"){
+  	if(link == "http://peterhinners.github.io" || link == "mailto:peterhinners@gmail.com" || link == "https://www.linkedin.com/in/petehinners" || link == "https://github.com/peterhinners"){
   	} else if(link == "http://peterhinners.github.io/contact.html"){
   		event.preventDefault();
   		console.log("working");
