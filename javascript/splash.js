@@ -8,7 +8,7 @@
 // $(window).load(function() {
 
 $(function() {	
-	console.log("what");
+	console.log("yo");
 
 	$('.navbar').load('../navbar.html');
   $('.main-content').load('../landing.html');
@@ -29,6 +29,7 @@ $(function() {
   	if(link == "http://peterhinners.github.io"){
   	} else if(link == "http://peterhinners.github.io/contact.html"){
   		event.preventDefault();
+  		console.log("working");
   		var request = $.ajax({url: link});
   		request.done(function(response){
   			$('.navbar').html(response);
