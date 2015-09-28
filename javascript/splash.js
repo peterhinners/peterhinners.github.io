@@ -8,7 +8,7 @@
 // $(window).load(function() {
 
 $(function() {	
-	console.log("bread");
+	console.log("butter");
 
 	$('.navbar').load('../navbar.html');
   $('.main-content').load('../landing.html');
