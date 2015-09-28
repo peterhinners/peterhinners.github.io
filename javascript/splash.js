@@ -8,7 +8,7 @@
 // $(window).load(function() {
 
 $(function() {	
-	console.log("resume6");
+	console.log("resume7");
 
 	$('.navbar').load('../navbar.html');
   $('.main-content').load('../landing.html');
