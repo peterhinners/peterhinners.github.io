@@ -8,7 +8,7 @@
 // $(window).load(function() {
 
 $(function() {	
-	console.log("github2");
+	console.log("bar");
 
 	$('.navbar').load('../navbar.html');
   $('.main-content').load('../landing.html');
