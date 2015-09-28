@@ -27,7 +27,13 @@ $(function() {
   	var link = $(this).attr("href");
 
   	if(link == "http://peterhinners.github.io"){
-  	} else {
+  	} else if(link == "http://peterhinners.github.io/contact.html"){
+  		event.preventDefault();
+  		var request = $.ajax({url: link});
+  		request.done(function(response){
+  			$('.navbar').html(response);
+  		});
+  	}	else {
 	  	event.preventDefault();
 	  	var request = $.ajax({url: link});
 	  	request.done(function(response){
