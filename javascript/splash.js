@@ -8,7 +8,7 @@
 // $(window).load(function() {
 
 $(function() {	
-	console.log("project2");
+	console.log("blue link");
 
 	$('.navbar').load('../navbar.html');
   $('.main-content').load('../landing.html');
