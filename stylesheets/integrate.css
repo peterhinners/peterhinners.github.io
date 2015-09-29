@@ -140,7 +140,7 @@ li {
 }
 
 #classchess, #chessboard {
-  max-width: 50%;
+  max-width: 50%; 
 }
 
 img {
@@ -150,13 +150,11 @@ img {
 }
 
 #firstjapchar {
-  
   margin-top: -25px;
 }
 
 #secondjapchar {
- 
-  margin-top: -75px
+  margin-top: -75px;
 }
 
 .container {
