@@ -9,6 +9,8 @@
 #entry-page {
   font-family: 'Libre Baskerville', serif;
   display: block; 
+  text-align: center;
+  margin: 0 auto;
 }
 
 p {
