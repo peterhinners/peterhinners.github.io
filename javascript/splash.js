@@ -8,7 +8,7 @@
 // $(window).load(function() {
 
 $(function() {	
-	console.log("change");
+	console.log("projects");
 
 	$('.navbar').load('../navbar.html');
   $('.main-content').load('../landing.html');
