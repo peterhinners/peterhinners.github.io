@@ -1,35 +1,11 @@
-#blue-line {
 
-}
-
-#donation-cat {
-  
-}
-
-#donation-cat-pic {
-  max-width: 100%;
-
-}
-
-#dc-text {
-  /*float: left;*/
+.links {
+  text-align: center;
 }
 
 #donation-cat-link, #tom-and-jerry-pic, #catbreak-pic {
-  font-size: 40px;
-  
+  font-size: 40px;  
 }
-
-
-
-/*#tom-and-jerry {
-  display: block;
-}
-
-#catbreak {
-  display: block;
-}*/
-
 
 .blue {
   text-decoration: none;
@@ -41,14 +17,7 @@
 }
 
 #entry-page {
-  font-family: 'Libre Baskerville', serif;
-  /*display: block;*/ 
-  /*text-align: center;*/
-  /*margin: 0 auto;*/
-}
-
-#entry-page a {
-  text-align: center;
+  font-family: 'Libre Baskerville', serif; 
 }
 
 p {
@@ -67,6 +36,10 @@ section {
   margin-right: auto;
   margin-left: auto;
   max-width: 55%;
+}
+
+section #tom-and-jerry-pic{
+  text-align: center;
 }
 
 h1 {
@@ -154,8 +127,6 @@ nav li {
   text-align: center;
 }
 
-
-
 li {
   display: block;
   margin: 0;
@@ -166,6 +137,10 @@ li {
 .underline_me:hover {
   text-decoration: none;
   border-bottom: 1px solid #000;
+}
+
+#classchess, #chessboard {
+  max-width: 50%;
 }
 
 img {

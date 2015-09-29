@@ -1,14 +1,5 @@
-
-
-// $(function() {
-//   $('.navbar').load('../navbar.html');
-//   $('#landing').load('../landing.html');
-// });
-
-// $(window).load(function() {
-
 $(function() {	
-	console.log("blog");
+	console.log("tweak");
 
 	$('.navbar').load('../navbar.html');
   $('.main-content').load('../landing.html');
