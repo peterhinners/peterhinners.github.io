@@ -1,4 +1,4 @@
-
+var globalID;
 	//Big props to http://www.lostdecadegames.com/how-to-make-a-simple-html5-canvas-game/ for creating an awesome tutorial.
 			window.scrollTo(0,document.body.scrollHeight);
 			var music = document.getElementById("audiotag1");
@@ -487,7 +487,7 @@
 				then = now;
 
 				// Request to do this again ASAP
-				requestAnimationFrame(main);
+				globalID = requestAnimationFrame(main);
 			}
 
 
