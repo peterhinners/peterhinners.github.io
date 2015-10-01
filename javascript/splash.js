@@ -1,5 +1,5 @@
 $(function() {	
-	console.log("resume2");
+	console.log("hey");
 
 	$('.navbar').load('../navbar.html');
   $('.main-content').load('../landing.html');
@@ -11,7 +11,7 @@ $(function() {
   		cancelAnimationFrame(globalID);
   		// pauseMusic();
   		// pauseToons();
-  		// $("#canvas").remove();
+  		$("#canvas").remove();
 			}
 
 
