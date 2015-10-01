@@ -9,13 +9,9 @@ $(function() {
   $(".navbar").on("click", "a", function(event){
   	if(typeof pauseMusic == 'function') { 
   		cancelAnimationFrame(globalID);
-  		// pauseMusic();
-  		// pauseToons();
   		$("#canvas").remove();
 			}
 
-
-  	
   	var link = $(this).attr("href");
 
   	if(link == "http://peterhinners.github.io" || link == "mailto:peterhinners@gmail.com" || link == "https://www.linkedin.com/in/petehinners" || link == "https://github.com/peterhinners" || link == "http://peterhinners.github.io/imgs/petehinners_resume.pdf"){
