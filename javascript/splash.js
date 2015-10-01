@@ -8,9 +8,10 @@ $(function() {
 
   $(".navbar").on("click", "a", function(event){
   	if(typeof pauseMusic == 'function') { 
-  		pauseMusic();
-  		pauseToons();
-  		$("#canvas").remove();
+  		cancelAnimationFrame(globalID);
+  		// pauseMusic();
+  		// pauseToons();
+  		// $("#canvas").remove();
 			}
 
 
