@@ -157,6 +157,10 @@ img {
   margin-top: -75px;
 }
 
+#sheet {
+  margin: 0 auto;
+}
+
 .container {
   margin: 0;
   padding: 0;
