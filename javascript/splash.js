@@ -1,5 +1,5 @@
 $(function() {	
-	console.log("margin");
+	console.log("center");
 
 	$('.navbar').load('../navbar.html');
   $('.main-content').load('../landing.html');
