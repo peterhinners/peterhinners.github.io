@@ -1,10 +1,7 @@
 $(function() {	
-	console.log("center");
-
+	
 	$('.navbar').load('../navbar.html');
   $('.main-content').load('../landing.html');
-
-	
 
   $(".navbar").on("click", "a", function(event){
   	if(typeof pauseMusic == 'function') { 
@@ -17,7 +14,6 @@ $(function() {
   	if(link == "http://peterhinners.github.io" || link == "mailto:peterhinners@gmail.com" || link == "https://www.linkedin.com/in/petehinners" || link == "https://github.com/peterhinners" || link == "http://peterhinners.github.io/imgs/petehinners_resume.pdf"){
   	} else if(link == "http://peterhinners.github.io/contact.html"){
   		event.preventDefault();
-  		console.log("working");
   		var request = $.ajax({url: link});
   		request.done(function(response){
   			$('.navbar').html(response);
